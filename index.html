@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veterans Life | Whole Life Insurance Built for Those Who Served</title>
+
+<!-- ════════════════════════════════════════════════════
+  META PIXEL — Replace YOUR_PIXEL_ID with your actual ID
+  Get this from: Meta Business Suite → Events Manager → Add Pixel
+════════════════════════════════════════════════════ -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'YOUR_PIXEL_ID');   // ← REPLACE WITH YOUR META PIXEL ID
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/></noscript>
+<!-- END META PIXEL -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1a2744;--navy2:#243358;--navy3:#0f1a30;
+  --gold:#c9922a;--gold2:#e8b44a;--gold3:#f5d485;
+  --cream:#f8f4ed;--cream2:#ede8de;
+  --red:#8b1a1a;
+  --white:#ffffff;--text:#2a2a2a;--muted:#6b6b6b;--border:#d4c9b0;
+  --green:#1e6b1e;--green2:#e6f4e6;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--cream);color:var(--text);font-size:18px;line-height:1.7;}
+.topbar{background:var(--red);text-align:center;padding:9px 20px;font-size:13px;color:#fff;letter-spacing:1.8px;font-weight:700;text-transform:uppercase;}
+header{background:var(--navy);border-bottom:4px solid var(--gold);}
+.header-inner{max-width:1140px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo-star{font-size:40px;color:var(--gold);line-height:1;}
+.logo-words h1{font-family:'Playfair Display',serif;color:#fff;font-size:26px;font-weight:900;line-height:1;letter-spacing:.5px;}
+.logo-words span{font-size:11px;color:var(--gold2);letter-spacing:3px;text-transform:uppercase;}
+.header-right{text-align:right;color:rgba(255,255,255,.65);font-size:13px;line-height:1.55;}
+.header-right strong{color:var(--gold2);display:block;font-size:15px;}
+.hero{background:linear-gradient(150deg,var(--navy3) 0%,var(--navy) 45%,#2a4070 100%);padding:68px 24px 100px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23c9922a' fill-opacity='.04'%3E%3Cpath d='M40 0l10 30L80 40 50 50 40 80 30 50 0 40l30-10z'/%3E%3C/g%3E%3C/svg%3E");}
+.hero-inner{position:relative;max-width:780px;margin:0 auto;}
+.hero-flag{display:inline-flex;align-items:center;gap:8px;background:var(--gold);color:var(--navy);font-size:11px;font-weight:800;letter-spacing:3px;text-transform:uppercase;padding:7px 22px;margin-bottom:26px;}
+.hero h2{font-family:'Playfair Display',serif;color:#fff;font-size:clamp(30px,5.5vw,58px);font-weight:900;line-height:1.12;margin-bottom:18px;}
+.hero h2 em{color:var(--gold2);font-style:normal;}
+.hero-lead{color:rgba(255,255,255,.83);font-size:19px;max-width:600px;margin:0 auto 14px;}
+.agent-promise{background:rgba(255,255,255,.08);border:1px solid rgba(201,146,42,.45);border-radius:6px;padding:18px 28px;margin:22px auto 0;max-width:620px;text-align:left;display:flex;gap:16px;align-items:flex-start;}
+.agent-promise .ap-icon{font-size:32px;flex-shrink:0;margin-top:2px;}
+.agent-promise .ap-text{color:rgba(255,255,255,.85);font-size:15px;line-height:1.6;}
+.agent-promise .ap-text strong{color:var(--gold2);font-size:16px;display:block;margin-bottom:4px;}
+.trust-chips{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px;}
+.chip{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:30px;padding:7px 16px;color:rgba(255,255,255,.78);font-size:14px;}
+.chip .ck{background:var(--gold);color:var(--navy);border-radius:50%;width:19px;height:19px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:900;flex-shrink:0;}
+.form-wrap{max-width:820px;margin:-40px auto 70px;padding:0 20px;position:relative;z-index:10;}
+.form-card{background:#fff;border-radius:4px;box-shadow:0 14px 60px rgba(26,39,68,.20),0 2px 8px rgba(0,0,0,.07);border-top:5px solid var(--gold);overflow:hidden;}
+.prog-bar-row{background:var(--cream2);padding:13px 28px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--border);}
+.prog-label{font-size:12px;color:var(--muted);font-weight:700;letter-spacing:1px;text-transform:uppercase;white-space:nowrap;}
+.prog-track{flex:1;height:7px;background:var(--border);border-radius:4px;overflow:hidden;}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--gold),var(--gold2));border-radius:4px;transition:width .4s ease;width:0%;}
+.prog-count{font-size:12px;color:var(--navy);font-weight:700;white-space:nowrap;}
+.step{display:none;padding:34px 40px 38px;animation:fadeUp .28s ease;}
+.step.active{display:block;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.step-icon{font-size:40px;display:block;margin-bottom:10px;}
+.step h3{font-family:'Playfair Display',serif;font-size:25px;color:var(--navy);font-weight:700;margin-bottom:5px;}
+.step .sub{color:var(--muted);font-size:16px;margin-bottom:24px;}
+.opts{display:grid;gap:11px;}
+.opts.two{grid-template-columns:1fr 1fr;}
+.opt{background:var(--cream);border:2px solid var(--border);border-radius:4px;padding:14px 18px;cursor:pointer;font-family:'Source Serif 4',Georgia,serif;font-size:16px;color:var(--text);display:flex;align-items:center;gap:12px;transition:all .16s;text-align:left;line-height:1.3;width:100%;}
+.opt:hover{border-color:var(--gold);background:#fffaf3;transform:translateX(3px);}
+.opt.sel{border-color:var(--navy);background:#eef2fb;color:var(--navy);font-weight:600;}
+.opt .oi{font-size:20px;flex-shrink:0;}
+.opt .ot strong{display:block;font-size:16px;}
+.opt .ot small{font-size:13px;color:var(--muted);font-weight:400;}
+.opt .ptag{text-align:right;flex-shrink:0;min-width:88px;}
+.opt .ptag .pa{font-family:'Playfair Display',serif;font-size:15px;font-weight:700;color:var(--navy);line-height:1;}
+.opt .ptag .pl{font-size:11px;color:var(--muted);}
+.fit-chip{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.4px;padding:2px 8px;border-radius:10px;margin-top:3px;}
+.fit-ok{background:var(--green2);color:var(--green);}
+.fit-warn{background:#fff3e0;color:#a0580a;}
+.fg{margin-bottom:18px;}
+.fg label{display:block;font-size:13px;font-weight:700;color:var(--navy);margin-bottom:7px;text-transform:uppercase;letter-spacing:.5px;}
+.fg input,.fg select{width:100%;padding:13px 16px;border:2px solid var(--border);border-radius:4px;font-family:'Source Serif 4',Georgia,serif;font-size:17px;color:var(--text);background:var(--cream);transition:border-color .2s;}
+.fg input:focus,.fg select:focus{outline:none;border-color:var(--navy);background:#fff;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.nav{display:flex;gap:12px;margin-top:26px;align-items:center;}
+.btn-next{background:var(--navy);color:#fff;border:none;padding:15px 34px;font-family:'Playfair Display',serif;font-size:17px;font-weight:700;border-radius:4px;cursor:pointer;transition:background .2s,transform .1s;}
+.btn-next:hover{background:var(--navy2);transform:translateY(-1px);}
+.btn-back{background:none;border:2px solid var(--border);color:var(--muted);padding:13px 22px;font-family:'Source Serif 4',Georgia,serif;font-size:15px;border-radius:4px;cursor:pointer;transition:all .2s;}
+.btn-back:hover{border-color:var(--navy);color:var(--navy);}
+.btn-submit{background:var(--gold);color:var(--navy);border:none;padding:17px 36px;font-family:'Playfair Display',serif;font-size:19px;font-weight:900;border-radius:4px;cursor:pointer;transition:all .2s;}
+.btn-submit:hover{background:var(--gold2);transform:translateY(-2px);box-shadow:0 6px 22px rgba(201,146,42,.42);}
+.insight{background:var(--cream2);border:1px solid var(--border);border-radius:4px;padding:12px 16px;margin-bottom:18px;font-size:14px;color:var(--muted);line-height:1.6;display:none;}
+.insight strong{color:var(--navy);}
+.loading{display:none;text-align:center;padding:56px 40px;}
+.loading.on{display:block;}
+.spinner{width:48px;height:48px;border:4px solid var(--border);border-top-color:var(--navy);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 20px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.results{display:none;padding:36px 40px 40px;}
+.results.on{display:block;animation:fadeUp .4s ease;}
+.res-head{text-align:center;margin-bottom:26px;padding-bottom:22px;border-bottom:2px solid var(--border);}
+.res-badge{display:inline-block;background:var(--green2);color:var(--green);border:1px solid #a8d4a8;border-radius:20px;padding:5px 16px;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;}
+.res-head h3{font-family:'Playfair Display',serif;font-size:26px;color:var(--navy);margin-bottom:6px;}
+.res-head p{color:var(--muted);font-size:15px;}
+.summary-strip{background:var(--navy);color:#fff;padding:12px 20px;border-radius:4px;display:flex;flex-wrap:wrap;gap:16px;font-size:13px;margin-bottom:20px;}
+.ss-item{display:flex;align-items:center;gap:6px;}
+.ss-item span{color:var(--gold2);font-weight:700;}
+.agent-callout{background:linear-gradient(135deg,#eef2fb,#f5f7ff);border:2px solid var(--navy);border-radius:6px;padding:20px 24px;margin-bottom:24px;display:flex;gap:16px;align-items:flex-start;}
+.agent-callout .ac-icon{font-size:36px;flex-shrink:0;}
+.agent-callout .ac-body strong{font-family:'Playfair Display',serif;color:var(--navy);font-size:18px;display:block;margin-bottom:4px;}
+.agent-callout .ac-body p{color:var(--muted);font-size:14px;line-height:1.6;}
+.agent-callout .ac-body .ac-quals{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px;}
+.ac-qual{background:var(--navy);color:var(--gold2);font-size:12px;font-weight:700;padding:3px 12px;border-radius:2px;letter-spacing:.5px;}
+.qcard{border:2px solid var(--border);border-radius:6px;margin-bottom:14px;overflow:hidden;transition:border-color .2s,box-shadow .2s;}
+.qcard:hover{border-color:var(--navy);box-shadow:0 4px 20px rgba(26,39,68,.1);}
+.qcard.rec{border-color:var(--gold);}
+.qcard-hd{background:var(--navy);padding:10px 20px;display:flex;align-items:center;justify-content:space-between;}
+.qcard.rec .qcard-hd{background:var(--gold);}
+.qcard-hd .carrier{font-family:'Playfair Display',serif;font-size:14px;font-weight:700;color:#fff;}
+.qcard.rec .qcard-hd .carrier{color:var(--navy);}
+.rec-pill{background:#fff;color:var(--gold);font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:3px 10px;border-radius:2px;}
+.qcard.rec .rec-pill{color:var(--navy);}
+.qcard-body{padding:18px 22px;background:#fff;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+.qd{flex:1;min-width:160px;}
+.qd .pname{font-weight:700;font-size:16px;color:var(--navy);margin-bottom:3px;}
+.qd .pdesc{font-size:13px;color:var(--muted);line-height:1.4;}
+.qcov{text-align:center;min-width:110px;}
+.qcov .camount{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--navy);}
+.qcov .clabel{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.qprice{text-align:right;min-width:130px;}
+.qprice .mo{font-family:'Playfair Display',serif;font-size:30px;font-weight:900;color:var(--navy);line-height:1;}
+.qprice .per{font-size:12px;color:var(--muted);}
+.qprice .yr{font-size:12px;color:var(--muted);margin-top:2px;}
+.bmatch{font-size:12px;font-weight:600;margin-top:4px;}
+.bmatch.ok{color:var(--green);}
+.bmatch.warn{color:#a0580a;}
+.qfeats{padding:0 22px 16px;background:var(--cream);display:flex;flex-wrap:wrap;gap:8px;}
+.feat{background:#fff;border:1px solid var(--border);border-radius:20px;padding:4px 13px;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:5px;}
+.feat .fd{color:var(--gold);font-size:14px;line-height:1;}
+.qcta{padding:18px 38px 32px;text-align:center;border-top:1px solid var(--border);}
+.qcta p{font-size:15px;color:var(--muted);margin-bottom:14px;}
+.disc{font-size:11px;color:#aaa;margin-top:14px;line-height:1.7;}
+.pillars-section{background:var(--navy);padding:62px 28px;text-align:center;}
+.pillars-section h3{font-family:'Playfair Display',serif;color:#fff;font-size:32px;margin-bottom:10px;}
+.pillars-section h3 em{color:var(--gold2);font-style:normal;}
+.pillars-section .psub{color:rgba(255,255,255,.6);font-size:16px;margin-bottom:40px;}
+.pillars{display:flex;gap:22px;justify-content:center;max-width:1040px;margin:0 auto;flex-wrap:wrap;}
+.pillar{flex:1;min-width:200px;max-width:252px;background:rgba(255,255,255,.05);border:1px solid rgba(201,146,42,.3);border-radius:6px;padding:26px 20px;text-align:center;}
+.pillar .pi{font-size:36px;margin-bottom:12px;}
+.pillar h4{font-family:'Playfair Display',serif;color:var(--gold2);font-size:18px;margin-bottom:8px;}
+.pillar p{color:rgba(255,255,255,.62);font-size:14px;line-height:1.65;}
+footer{background:#0e141e;color:rgba(255,255,255,.48);padding:42px 28px;text-align:center;}
+.foot-logo{font-family:'Playfair Display',serif;color:var(--gold);font-size:22px;font-weight:900;margin-bottom:12px;}
+footer p{font-size:13px;line-height:2;}
+footer a{color:rgba(255,255,255,.38);text-decoration:none;}
+footer a:hover{color:var(--gold2);}
+@media(max-width:620px){
+  .opts.two{grid-template-columns:1fr;}
+  .frow{grid-template-columns:1fr;}
+  .step{padding:20px 16px 24px;}
+  .header-inner{padding:14px 18px;}
+  .header-right{display:none;}
+  .qcard-body{flex-direction:column;align-items:flex-start;}
+  .qprice{text-align:left;}
+  .nav{flex-direction:column;}
+  .btn-next,.btn-back,.btn-submit{width:100%;text-align:center;}
+  .agent-promise{flex-direction:column;gap:10px;}
+  .agent-callout{flex-direction:column;gap:10px;}
+  .summary-strip{gap:10px;}
+  .prog-bar-row{padding:11px 14px;}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">🇺🇸 Veterans Life — Serving Honorably Discharged Veterans &amp; Families Nationwide 🇺🇸</div>
+
+<header>
+  <div class="header-inner">
+    <a class="logo" href="#">
+      <div class="logo-star">★</div>
+      <div class="logo-words"><h1>Veterans Life</h1><span>Insurance Services</span></div>
+    </a>
+    <div class="header-right">
+      <strong>No Medical Exams Required</strong>
+      Rates locked for life · Licensed all 50 states<br>Quotes delivered by a live licensed agent
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">★ Free · No-Obligation Quote ★</div>
+    <h2>You Served With Honor.<br><em>We'll Protect Your Legacy.</em></h2>
+    <p class="hero-lead">Simple whole life insurance built specifically for veterans and their families — no medical exams, guaranteed rates that never change.</p>
+    <div class="agent-promise">
+      <div class="ap-icon">👨‍💼</div>
+      <div class="ap-text">
+        <strong>You'll speak with a real, licensed agent — not a bot.</strong>
+        Answer 10 short questions and a Veterans Life licensed specialist will review your responses and personally deliver your custom quote. Your age, health, and gender are used to match you with the best available Transamerica rates.
+      </div>
+    </div>
+    <div class="trust-chips">
+      <div class="chip"><span class="ck">✓</span> No Exam Required</div>
+      <div class="chip"><span class="ck">✓</span> Rates Lock for Life</div>
+      <div class="chip"><span class="ck">✓</span> Real Licensed Agent</div>
+      <div class="chip"><span class="ck">✓</span> 24-Hr Payout Promise</div>
+    </div>
+  </div>
+</div>
+
+<div class="form-wrap">
+  <div class="form-card" id="formCard">
+    <div class="prog-bar-row">
+      <span class="prog-label">Your Quote</span>
+      <div class="prog-track"><div class="prog-fill" id="progFill"></div></div>
+      <span class="prog-count" id="progCount">Question 1 of 10</span>
+    </div>
+
+    <!-- Q1 GOAL -->
+    <div class="step active" id="step1">
+      <span class="step-icon">🎯</span>
+      <h3>What's Your Main Goal?</h3>
+      <p class="sub">Choose the one that fits best — we'll tailor everything to it.</p>
+      <div class="opts">
+        <button class="opt" onclick="pick(this,'goal','Protect My Family')"><span class="oi">👨‍👩‍👧</span><span class="ot"><strong>Protect My Family</strong><small>Cover debts &amp; expenses I'd leave behind</small></span></button>
+        <button class="opt" onclick="pick(this,'goal','Funeral &amp; Burial Costs')"><span class="oi">🕊️</span><span class="ot"><strong>Funeral &amp; Burial Costs</strong><small>No burden left on my loved ones</small></span></button>
+        <button class="opt" onclick="pick(this,'goal','Leave a Legacy')"><span class="oi">🏅</span><span class="ot"><strong>Leave a Legacy</strong><small>Pass something meaningful to those I love</small></span></button>
+        <button class="opt" onclick="pick(this,'goal','Just Exploring')"><span class="oi">🔍</span><span class="ot"><strong>Just Exploring</strong><small>See what's available and what it costs</small></span></button>
+      </div>
+      <div class="nav"><button class="btn-next" onclick="next()">Continue →</button></div>
+    </div>
+
+    <!-- Q2 WHO -->
+    <div class="step" id="step2">
+      <span class="step-icon">👤</span>
+      <h3 id="q2h">Who Is This Coverage For?</h3>
+      <p class="sub" id="q2s">Select one option below.</p>
+      <div class="opts two">
+        <button class="opt" onclick="pick(this,'who','Myself')"><span class="oi">🙋</span><strong>Myself</strong></button>
+        <button class="opt" onclick="pick(this,'who','My Spouse')"><span class="oi">💍</span><strong>My Spouse</strong></button>
+        <button class="opt" onclick="pick(this,'who','A Parent')"><span class="oi">👴</span><strong>A Parent</strong></button>
+        <button class="opt" onclick="pick(this,'who','Someone Else')"><span class="oi">👥</span><strong>Someone Else</strong></button>
+      </div>
+      <div class="nav"><button class="btn-back" onclick="back()">← Back</button><button class="btn-next" onclick="next()">Continue →</button></div>
+    </div>
+
+    <!-- Q3 MILITARY STATUS -->
+    <div class="step" id="step3">
+      <span class="step-icon">🎖️</span>
+      <h3>What's Your Current Military Status?</h3>
+      <p class="sub">This determines which veteran-specific benefits apply to your plan.</p>
+      <div class="opts">
+        <button class="opt" onclick="pick(this,'status','Honorably Discharged')"><span class="oi">🪖</span><span class="ot"><strong>Honorably Discharged</strong><small>Served &amp; received an honorable discharge</small></span></button>
+        <button class="opt" onclick="pick(this,'status','Spouse of a Veteran')"><span class="oi">💛</span><span class="ot"><strong>Spouse of a Veteran</strong><small>Married to an honorably discharged veteran</small></span></button>
+        <button class="opt" onclick="pick(this,'status','Widow of a Veteran')"><span class="oi">🤍</span><span class="ot"><strong>Widow of a Veteran</strong><small>Lost a spouse who served honorably</small></span></button>
+        <button class="opt" onclick="pick(this,'status','Active Duty Veteran')"><span class="oi">🫡</span><span class="ot"><strong>Active Duty Veteran</strong><small>Currently serving in the U.S. military</small></span></button>
+      </div>
+      <div class="nav"><button class="btn-back" onclick="back()">← Back</button><button class="btn-next" onclick="next()">Continue →</button></div>
+    </div>
+
+    <!-- Q4 DOB + GENDER -->
+    <div class="step" id="step4">
+      <span class="step-icon">📋</span>
+      <h3>Date of Birth &amp; Gender</h3>
+      <p class="sub">Your age and gender determine your exact rate.</p>
+      <div class="frow">
+        <div class="fg"><label>Date of Birth</label><input type="date" id="dob" max="2008-01-01" min="1924-01-01" onchange="A.dob=this.value;calcAge();"></div>
+        <div class="fg">
+          <label>Gender</label>
+          <select id="gender" onchange="A.gender=this.value">
+            <option value="">Select...</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+      </div>
+      <div id="ageMsg" style="font-size:15px;color:var(--muted);margin-top:-6px;margin-bottom:10px;min-height:22px;"></div>
+      <div class="nav"><button class="btn-back" onclick="back()">← Back</button><button class="btn-next" onclick="next()">Continue →</button></div>
+    </div>
+
+    <!-- Q5 COVERAGE AMOUNT -->
+    <div class="step" id="step5">
+      <span class="step-icon">🛡️</span>
+      <h3 id="q5h">How Much Coverage Do You Have in Mind?</h3>
+      <p class="sub" id="q5s">Each option shows your estimated monthly rate for your age — right now.</p>
+      <div class="insight" id="q5insight"></div>
+      <div class="opts" id="coverageOpts"></div>
+      <div class="nav"><button class="btn-back" onclick="back()">← Back</button><button class="btn-next" onclick="next()">Continue →</button></div>
+    </div>
+
+    <!-- Q6 BUDGET -->
+    <div class="step" id="step6">
+      <span class="step-icon">💰</span>
+      <h3 id="q6h">What Can You Comfortably Set Aside Monthly?</h3>
+      <p class="sub" id="q6s">Helps us confirm your coverage choice fits — no surprises.</p>
+      <div class="opts" id="budgetOpts"></div>
+      <div class="nav"><button class="btn-back" onclick="back()">← Back</button><button class="btn-next" onclick="next()">Continue →</button></div>
+    </div>
+
+    <!-- Q7 BENEFICIARY -->
+    <div class="step" id="step7">
+      <span class="step-icon">❤️</span>
+      <h3 id="q7h">Who Would Receive the Benefit?</h3>
+      <p class="sub" id="q7s">Your licensed agent will help you set this up correctly.</p>
+      <div class="opts">
+        <button class="opt" onclick="pick(this,'bene','Spouse or Partner')"><span class="oi">💍</span><strong>Spouse or Partner</strong></button>
+        <button class="opt" onclick="pick(this,'bene','Children or Grandchildren')"><span class="oi">👨‍👧</span><strong>Children or Grandchildren</strong></button>
+        <button class="opt" onclick="pick(this,'bene','My Estate')"><span class="oi">🏠</span><strong>My Estate</strong></button>
+        <button class="opt" onclick="pick(this,'bene','Another Person')"><span class="oi">👥</span><strong>Another Person</strong></button>
+      </div>
+      <div class="nav"><button class="btn-back" onclick="back()">← Back</button><button class="btn-next" onclick="next()">Continue →</button></div>
+    </div>
+
+    <!-- Q8 HEALTH -->
+    <div class="step" id="step8">
+      <span class="step-icon">🩺</span>
+      <h3 id="q8h">Any Major Health Events in the Last 2 Years?</h3>
+      <p class="sub" id="q8s">Select all that apply — no medical exam needed, just honest answers.</p>
+      <div class="opts">
+        <button class="opt" id="h_none" onclick="togHealth('none','No Major Issues')"><span class="oi">✅</span><strong>No Major Issues</strong></button>
+        <button class="opt" id="h_heart" onclick="togHealth('heart','Heart or Circulation')"><span class="oi">🫀</span><strong>Heart or Circulation</strong></button>
+        <button class="opt" id="h_diabetes" onclick="togHealth('diabetes','Diabetes Complications')"><span class="oi">💉</span><strong>Diabetes Complications</strong></button>
+        <button class="opt" id="h_other" onclick="togHealth('other','Other Condition')"><span class="oi">📋</span><strong>Other Condition</strong></button>
+      </div>
+      <div class="nav"><button class="btn-back" onclick="back()">← Back</button><button class="btn-next" onclick="next()">Continue →</button></div>
+    </div>
+
+    <!-- Q9 TOBACCO -->
+    <div class="step" id="step9">
+      <span class="step-icon">🚭</span>
+      <h3>Tobacco or Nicotine Use — Last 12 Months?</h3>
+      <p class="sub">Cigarettes, cigars, chew, or vaping — yes or no.</p>
+      <div class="opts two">
+        <button class="opt" onclick="pick(this,'tobacco','Yes')"><span class="oi">🚬</span><strong>Yes</strong></button>
+        <button class="opt" onclick="pick(this,'tobacco','No')"><span class="oi">✅</span><strong>No</strong></button>
+      </div>
+      <div class="nav"><button class="btn-back" onclick="back()">← Back</button><button class="btn-next" onclick="next()">Continue →</button></div>
+    </div>
+
+    <!-- Q10 CONTACT + TIMELINE -->
+    <div class="step" id="step10">
+      <span class="step-icon">📬</span>
+      <h3>Last Step — Where Do We Reach You?</h3>
+      <p class="sub" id="q10s">Your licensed Veterans Life agent will call with your personalized quote.</p>
+      <p style="font-size:14px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;">How soon do you need coverage?</p>
+      <div class="opts two" style="margin-bottom:22px;">
+        <button class="opt" onclick="pick(this,'timeline','Right Away')"><span class="oi">⚡</span><strong>Right Away</strong></button>
+        <button class="opt" onclick="pick(this,'timeline','Within a Week')"><span class="oi">📅</span><strong>Within a Week</strong></button>
+        <button class="opt" onclick="pick(this,'timeline','Within 30 Days')"><span class="oi">🗓️</span><strong>Within 30 Days</strong></button>
+        <button class="opt" onclick="pick(this,'timeline','Just Researching')"><span class="oi">📖</span><strong>Just Researching</strong></button>
+      </div>
+      <div class="frow">
+        <div class="fg"><label>First Name</label><input type="text" id="fname" placeholder="John" oninput="A.fname=this.value"></div>
+        <div class="fg"><label>Last Name</label><input type="text" id="lname" placeholder="Smith" oninput="A.lname=this.value"></div>
+      </div>
+      <div class="fg"><label>Phone Number</label><input type="tel" id="phone" placeholder="(555) 000-0000" oninput="A.phone=this.value"></div>
+      <div class="fg"><label>Email Address</label><input type="email" id="email" placeholder="john@example.com" oninput="A.email=this.value"></div>
+      <div class="fg">
+        <label>State</label>
+        <select id="state" onchange="A.state=this.value">
+          <option value="">Select your state...</option>
+          <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option>
+        </select>
+      </div>
+      <div style="background:#eef2fb;border:1px solid #c8d4f0;border-radius:4px;padding:14px 18px;font-size:14px;color:var(--navy);margin-top:4px;margin-bottom:6px;line-height:1.6;">
+        🔒 <strong>Privacy guaranteed.</strong> Your information is never sold. A licensed Veterans Life agent will use your age, health, and gender responses to prepare a personalized Transamerica quote — delivered by phone or email.
+      </div>
+      <div class="nav"><button class="btn-back" onclick="back()">← Back</button><button class="btn-submit" onclick="submitForm()">Get My Agent Quote →</button></div>
+    </div>
+
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+      <h3 style="font-family:'Playfair Display',serif;color:var(--navy);font-size:22px;margin-bottom:8px;">Preparing Your Quote…</h3>
+      <p style="color:var(--muted);font-size:16px;max-width:420px;margin:0 auto;">Matching your age, health history, and coverage goals to the best available Transamerica rates.</p>
+    </div>
+
+    <div class="results" id="results">
+      <div class="res-head">
+        <div class="res-badge">✓ Quote Estimates Ready</div>
+        <h3 id="resName">Your Personalized Quotes</h3>
+        <p id="resSummary"></p>
+      </div>
+      <div class="agent-callout">
+        <div class="ac-icon">📞</div>
+        <div class="ac-body">
+          <strong>A licensed Veterans Life agent is reviewing your responses</strong>
+          <p>Based on your age, gender, health history, and coverage goals, a licensed specialist will contact you to finalize your Transamerica whole life policy. These estimates are your starting point — your agent will confirm the exact rate.</p>
+          <div class="ac-quals">
+            <span class="ac-qual">Licensed Agent</span>
+            <span class="ac-qual">Transamerica Certified</span>
+            <span class="ac-qual">Veteran Specialist</span>
+            <span class="ac-qual">No Pressure · No Obligation</span>
+          </div>
+        </div>
+      </div>
+      <div id="summaryStrip" class="summary-strip"></div>
+      <div id="quoteCards"></div>
+      <div class="qcta">
+        <p>Want to speak with your agent sooner? Call us directly — no hold times.</p>
+        <button class="btn-submit" onclick="alert('Thank you for your service! A Veterans Life licensed agent will be in touch shortly to review your quotes.')">📞 Connect With My Agent Now</button>
+        <div class="disc">Rate estimates are based on Transamerica's published simplified-issue whole life tables and are illustrative only. Final rates are subject to underwriting approval by Transamerica Life Insurance Company. Veterans Life Insurance Services is an independent agency and is not affiliated with the U.S. Department of Veterans Affairs or any government agency.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pillars-section">
+  <h3>Why Veterans Trust <em>Veterans Life</em></h3>
+  <p class="psub">We exist to serve the people who served this country.</p>
+  <div class="pillars">
+    <div class="pillar"><div class="pi">🏅</div><h4>Built for Veterans</h4><p>Plans designed to fill the gaps VA burial benefits leave behind — so your family is never caught short.</p></div>
+    <div class="pillar"><div class="pi">📋</div><h4>No Medical Exams</h4><p>Honest health questions only. No doctors, no bloodwork, no hassle. Simple and fast approval.</p></div>
+    <div class="pillar"><div class="pi">👨‍💼</div><h4>Real Licensed Agents</h4><p>Every quote is reviewed and delivered by a live, licensed Veterans Life specialist — not a call center.</p></div>
+    <div class="pillar"><div class="pi">🔒</div><h4>Rates Locked for Life</h4><p>Your premium is guaranteed never to increase — what you're quoted is what you'll always pay.</p></div>
+    <div class="pillar"><div class="pi">🇺🇸</div><h4>All 50 States</h4><p>Fully licensed nationwide. Wherever you've settled after your service, Veterans Life is here.</p></div>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-logo">★ Veterans Life</div>
+  <p>Veterans Life Insurance Services &nbsp;|&nbsp; Licensed in All 50 States<br>
+  Serving honorably discharged veterans and their families nationwide.<br><br>
+  <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms of Service</a> &nbsp;|&nbsp; <a href="#">Licensing Information</a><br><br>
+  © 2026 Veterans Life Insurance Services. All rights reserved.<br>
+  <small>Transamerica Life Insurance Company is an independent carrier. Veterans Life Insurance Services is an independent insurance agency and is not affiliated with or endorsed by the U.S. Department of Veterans Affairs or any government agency. Coverage subject to underwriting approval.</small></p>
+</footer>
+
+<script>
+// ════════════════════════════════════════════════════════
+//  STATE — all answers stored here, sent on submit
+// ════════════════════════════════════════════════════════
+const TOTAL=10;
+let step=1;
+let healthLabels=[];
+const A={
+  goal:null,who:null,status:null,
+  dob:null,gender:null,age:null,
+  coverageTier:null,coverageLabel:null,
+  budget:null,budgetLabel:null,
+  bene:null,health:[],healthLabel:[],
+  tobacco:null,timeline:null,
+  fname:'',lname:'',phone:'',email:'',state:''
+};
+
+// ════════════════════════════════════════════════════════
+//  RATE TABLE
+// ════════════════════════════════════════════════════════
+const RATES={
+  male:  {'45-49':2.85,'50-54':3.50,'55-59':4.40,'60-64':5.60,'65-69':7.20,'70-74':9.80,'75-79':13.50,'80-84':18.90,'85-89':26.00,'90+':36.00},
+  female:{'45-49':2.20,'50-54':2.70,'55-59':3.30,'60-64':4.20,'65-69':5.40,'70-74':7.20,'75-79':10.20,'80-84':14.50,'85-89':20.00,'90+':28.00}
+};
+function band(age){
+  if(age<50)return'45-49';if(age<55)return'50-54';if(age<60)return'55-59';
+  if(age<65)return'60-64';if(age<70)return'65-69';if(age<75)return'70-74';
+  if(age<80)return'75-79';if(age<85)return'80-84';if(age<90)return'85-89';
+  return'90+';
+}
+function monthly(cov,age,gender,tobacco,health){
+  const g=(gender==='Female')?'female':'male';
+  let r=RATES[g][band(age)]||5;
+  if(tobacco==='Yes')r*=1.50;
+  const h=health||[];
+  if(h.includes('heart'))r*=1.35;
+  if(h.includes('diabetes'))r*=1.20;
+  if(h.includes('other'))r*=1.15;
+  return r*cov/1000;
+}
+
+const TIERS=[
+  {v:5000,  lb:'$5,000',   ic:'🔵',ds:'Basic burial coverage'},
+  {v:10000, lb:'$10,000',  ic:'🟢',ds:'Covers most funeral costs'},
+  {v:15000, lb:'$15,000',  ic:'🟢',ds:'Full funeral + final expenses'},
+  {v:25000, lb:'$25,000',  ic:'🟡',ds:'Funeral + family buffer'},
+  {v:50000, lb:'$50,000',  ic:'🟠',ds:'Strong family protection'},
+  {v:75000, lb:'$75,000',  ic:'🔴',ds:'Solid legacy amount'},
+  {v:100000,lb:'$100,000', ic:'💎',ds:'Full legacy &amp; family security'}
+];
+
+const CTX={
+  'Protect My Family':{
+    q2h:'Who Are You Looking to Protect?',q2s:"Let's make sure the right person is covered.",
+    q5h:"How Much Would Cover Your Family's Needs?",q5s:'Think mortgage, debts, and income your family would miss. Rates shown for your age.',
+    q5ins:'Most families find <strong>$25,000–$75,000</strong> covers outstanding debts and gives loved ones 12–24 months of breathing room.',
+    q6h:'What Monthly Amount Fits Your Budget?',q6s:"We want your policy to feel affordable — not like a burden.",
+    q7h:'Who Would Receive the Payout?',q7s:'This person will be protected. Your agent confirms the beneficiary details.',
+    q8h:'Any Health History We Should Know About?',q8s:'Helps us find the best plan to protect your family.',
+    q10s:'A Veterans Life agent will call with a personalized plan to protect your family.'
+  },
+  'Funeral & Burial Costs':{
+    q2h:'Who Are You Planning This For?',q2s:"We'll match coverage options to the right person.",
+    q5h:'How Much Would Cover Funeral &amp; Final Costs?',q5s:'Average funerals run $9,000–$15,000. VA burial covers up to $2,000 — this fills the gap.',
+    q5ins:'The average funeral, burial, and headstone totals <strong>$12,000–$18,000</strong>. A $15,000–$25,000 policy fully covers these costs.',
+    q6h:'What Monthly Amount Feels Manageable?',q6s:'Even a small monthly amount locks in total peace of mind for your family.',
+    q7h:'Who Should Receive the Benefit?',q7s:'Usually a spouse or child who would handle final arrangements.',
+    q8h:'Any Health Conditions in the Last 2 Years?',q8s:'No exam — just a few honest questions to find your best rate.',
+    q10s:'A licensed agent will reach out with a burial coverage plan tailored to your needs.'
+  },
+  'Leave a Legacy':{
+    q2h:'Who Will Inherit This Legacy?',q2s:"We'll help you choose the right beneficiary structure.",
+    q5h:'What Size Legacy Do You Want to Leave?',q5s:'Whether $10,000 or $100,000 — live estimates are shown for your age below.',
+    q5ins:'Many veterans leave <strong>$25,000–$100,000</strong> to a spouse, children, or a cause they care about — often at just dollars per day.',
+    q6h:'What Monthly Contribution Works for You?',q6s:'Your rate is locked for life — choose an amount that feels right long-term.',
+    q7h:'Who Would Receive Your Legacy?',q7s:'Spouse, children, grandchildren, or a cause close to your heart.',
+    q8h:'Any Health History to Be Aware Of?',q8s:'Helps us match you to the best available legacy plan.',
+    q10s:'A Veterans Life agent will contact you to secure your legacy plan.'
+  },
+  'Just Exploring':{
+    q2h:'Who Are You Thinking About Covering?',q2s:'No commitment — just exploring your options.',
+    q5h:'What Coverage Range Interests You?',q5s:'Real estimated rates for your age shown here — no obligation.',
+    q5ins:'Coverage ranges from <strong>$5,000 to $100,000</strong>. Most veterans choose $15,000–$50,000 to cover final costs and leave a little extra.',
+    q6h:'What Monthly Range Would You Consider?',q6s:"Just a ballpark — helps us show what's realistic.",
+    q7h:'Who Would You Name as Beneficiary?',q7s:'You can change this anytime — just good to plan ahead.',
+    q8h:'Any Major Health Events in the Last 2 Years?',q8s:'Gives us accurate rate estimates for you.',
+    q10s:'A licensed Veterans Life agent will reach out with your personalized options.'
+  }
+};
+function ctx(){return CTX[A.goal]||CTX['Just Exploring'];}
+
+function calcAge(){
+  if(!A.dob)return;
+  const d=new Date(A.dob),t=new Date();
+  let age=t.getFullYear()-d.getFullYear();
+  const m=t.getMonth()-d.getMonth();
+  if(m<0||(m===0&&t.getDate()<d.getDate()))age--;
+  A.age=age;
+  const el=document.getElementById('ageMsg');
+  if(age>=45&&age<=90){el.textContent='Age '+age+' — eligible for coverage';el.style.color='#1e6b1e';}
+  else if(age<45){el.textContent='Age '+age+' — plans start at age 45';el.style.color='var(--muted)';}
+  else{el.textContent='Age '+age+' — please contact us directly';el.style.color='var(--red)';}
+  // Fire Meta Pixel custom event when age is entered
+  if(typeof fbq!=='undefined') fbq('trackCustom','AgeEntered',{age:age});
+}
+
+function buildCoverage(){
+  const age=A.age||65,g=A.gender||'Male';
+  const c=ctx();
+  let tiers;
+  if(age>=85)tiers=TIERS.slice(0,4);
+  else if(age>=75)tiers=TIERS.slice(0,5);
+  else if(age>=65)tiers=TIERS.slice(1,6);
+  else tiers=TIERS.slice(2,7);
+
+  let suggested=[];
+  if(A.goal==='Funeral & Burial Costs')suggested=[10000,15000,25000];
+  else if(A.goal==='Protect My Family')suggested=[25000,50000,75000];
+  else if(A.goal==='Leave a Legacy')suggested=[50000,75000,100000];
+  else suggested=[15000,25000,50000];
+  const avail=tiers.map(t=>t.v);
+  suggested=suggested.filter(s=>avail.includes(s));
+  if(!suggested.length)suggested=[tiers[Math.floor(tiers.length/2)].v];
+  if(!A.coverageTier||!avail.includes(A.coverageTier)){
+    A.coverageTier=suggested[Math.floor(suggested.length/2)];
+    A.coverageLabel=TIERS.find(t=>t.v===A.coverageTier)?.lb||'';
+  }
+  let html='';
+  tiers.forEach(t=>{
+    const mo=monthly(t.v,age,g,'No',[]);
+    const isSug=suggested.includes(t.v);
+    const isSel=t.v===A.coverageTier;
+    html+=`<button class="opt${isSel?' sel':''}" onclick="pickCoverage(this,${t.v},'${t.lb}')">
+      <span class="oi">${isSug?'⭐':t.ic}</span>
+      <span class="ot"><strong>${t.lb}</strong>
+      <small>${t.ds}${isSug?' — <em style="color:var(--navy);font-style:normal">Suggested for your goal</em>':''}</small></span>
+      <span class="ptag"><div class="pa">~$${mo.toFixed(2)}</div><div class="pl">/ month</div></span>
+    </button>`;
+  });
+  document.getElementById('coverageOpts').innerHTML=html;
+  const ins=document.getElementById('q5insight');
+  ins.innerHTML='💡 '+c.q5ins;
+  ins.style.display='block';
+  s('q5h',c.q5h);s('q5s',c.q5s);
+}
+
+function buildBudget(){
+  const age=A.age||65,g=A.gender||'Male';
+  const tier=A.coverageTier||25000;
+  const est=monthly(tier,age,g,A.tobacco||'No',A.health||[]);
+  const BANDS=[
+    {val:'under30',lb:'Under $30/mo',max:30},
+    {val:'30to50',lb:'$30 – $50/mo',max:50},
+    {val:'50to75',lb:'$50 – $75/mo',max:75},
+    {val:'75to100',lb:'$75 – $100/mo',max:100},
+    {val:'100to150',lb:'$100 – $150/mo',max:150},
+    {val:'150plus',lb:'$150+/mo',max:999}
+  ];
+  const filtered=BANDS.filter(b=>b.max>=est*0.5);
+  let html=`<p style="font-size:14px;color:var(--muted);margin-bottom:14px;">
+    Your <strong>${A.coverageLabel||'$'+tier.toLocaleString()}</strong> plan estimates <strong>~$${est.toFixed(2)}/mo</strong> — which range works for you?</p>`;
+  filtered.forEach(b=>{
+    const fits=est<=b.max;
+    html+=`<button class="opt" onclick="pickBudget(this,'${b.val}','${b.lb}')">
+      <span class="oi">${fits?'✅':'💬'}</span>
+      <span class="ot"><strong>${b.lb}</strong>
+      <span class="fit-chip ${fits?'fit-ok':'fit-warn'}">${fits?'✓ Covers your selection':'⚠ May need adjustment'}</span></span>
+    </button>`;
+  });
+  document.getElementById('budgetOpts').innerHTML=html;
+  s('q6h',ctx().q6h);s('q6s',ctx().q6s);
+}
+
+function s(id,v){const e=document.getElementById(id);if(e&&v)e.innerHTML=v;}
+function applyCtx(){
+  const c=ctx();
+  s('q2h',c.q2h);s('q2s',c.q2s);
+  s('q7h',c.q7h);s('q7s',c.q7s);
+  s('q8h',c.q8h);s('q8s',c.q8s);
+  s('q10s',c.q10s);
+}
+
+// ════════════════════════════════════════════════════════
+//  PICK FUNCTIONS — all store human-readable labels
+// ════════════════════════════════════════════════════════
+function pick(btn,field,value){
+  btn.closest('.opts').querySelectorAll('.opt').forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+  A[field]=value;
+  // Fire pixel step event
+  if(typeof fbq!=='undefined') fbq('trackCustom','QuizStep',{field:field,value:value,step:step});
+}
+function pickCoverage(btn,val,label){
+  btn.closest('.opts').querySelectorAll('.opt').forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+  A.coverageTier=val;
+  A.coverageLabel=label;
+  if(typeof fbq!=='undefined') fbq('trackCustom','CoverageSelected',{coverage:label,value:val});
+}
+function pickBudget(btn,val,label){
+  btn.closest('.opts').querySelectorAll('.opt').forEach(b=>b.classList.remove('sel'));
+  btn.classList.add('sel');
+  A.budget=val;
+  A.budgetLabel=label;
+  if(typeof fbq!=='undefined') fbq('trackCustom','BudgetSelected',{budget:label});
+}
+function togHealth(v,label){
+  const b=document.getElementById('h_'+v);
+  if(v==='none'){
+    A.health=['none'];A.healthLabel=['No Major Issues'];
+    healthLabels=['No Major Issues'];
+    ['none','heart','diabetes','other'].forEach(k=>document.getElementById('h_'+k).classList.remove('sel'));
+    b.classList.add('sel');
+  } else {
+    const i=A.health.indexOf('none');
+    if(i>-1){A.health.splice(i,1);healthLabels=healthLabels.filter(x=>x!=='No Major Issues');document.getElementById('h_none').classList.remove('sel');}
+    if(b.classList.contains('sel')){b.classList.remove('sel');A.health=A.health.filter(x=>x!==v);healthLabels=healthLabels.filter(x=>x!==label);}
+    else{b.classList.add('sel');A.health.push(v);healthLabels.push(label);}
+    A.healthLabel=[...healthLabels];
+  }
+}
+
+function updateProg(){
+  document.getElementById('progFill').style.width=(((step-1)/TOTAL)*100)+'%';
+  document.getElementById('progCount').textContent='Question '+step+' of '+TOTAL;
+}
+function scrollTop(){
+  const top=document.getElementById('formCard').getBoundingClientRect().top+window.scrollY-20;
+  window.scrollTo({top,behavior:'smooth'});
+}
+function showStep(n){
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+  const el=document.getElementById('step'+n);
+  if(el)el.classList.add('active');
+  updateProg();
+  if(n===5){applyCtx();buildCoverage();}
+  if(n===6)buildBudget();
+  if(n===7||n===8||n===10)applyCtx();
+  // Fire pixel step view
+  if(typeof fbq!=='undefined') fbq('trackCustom','StepViewed',{step:n});
+  scrollTop();
+}
+function next(){if(step===1)applyCtx();if(step<TOTAL){step++;showStep(step);}}
+function back(){if(step>1){step--;showStep(step);}}
+
+// ════════════════════════════════════════════════════════
+//  SUBMIT — collect ALL data, fire Meta events, send webhook
+// ════════════════════════════════════════════════════════
+function submitForm(){
+  if(!A.fname||!A.lname){alert('Please enter your full name.');return;}
+  if(!A.phone){alert('Please enter your phone number.');return;}
+
+  // Build complete lead payload with all quiz answers
+  const leadData={
+    // Contact
+    first_name: A.fname,
+    last_name:  A.lname,
+    full_name:  A.fname+' '+A.lname,
+    phone:      A.phone,
+    email:      A.email,
+    state:      A.state,
+    // Demographics
+    dob:        A.dob,
+    age:        A.age,
+    gender:     A.gender,
+    // Quiz answers — all human-readable
+    goal:       A.goal,
+    who:        A.who,
+    military_status: A.status,
+    coverage_amount: A.coverageLabel,
+    coverage_value:  A.coverageTier,
+    monthly_budget:  A.budgetLabel,
+    beneficiary:     A.bene,
+    health_history:  (A.healthLabel&&A.healthLabel.length?A.healthLabel.join(', '):'Not answered'),
+    tobacco_use:     A.tobacco,
+    timeline:        A.timeline,
+    // Metadata
+    estimated_monthly_rate: monthly(A.coverageTier||25000, A.age||65, A.gender||'Male', A.tobacco||'No', A.health||[]).toFixed(2),
+    source: 'veterans-life-website',
+    submitted_at: new Date().toISOString(),
+    url: window.location.href,
+    utm_source:   new URLSearchParams(window.location.search).get('utm_source')||'',
+    utm_medium:   new URLSearchParams(window.location.search).get('utm_medium')||'',
+    utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign')||'',
+    utm_adset:    new URLSearchParams(window.location.search).get('utm_adset')||'',
+    utm_ad:       new URLSearchParams(window.location.search).get('utm_ad')||''
+  };
+
+  // 1. META PIXEL — Lead conversion event (this is what optimizes your ad spend)
+  if(typeof fbq!=='undefined'){
+    fbq('track','Lead',{
+      content_name: 'Veterans Life Quote Request',
+      content_category: 'Life Insurance',
+      value: parseFloat(leadData.estimated_monthly_rate)*12,
+      currency: 'USD'
+    });
+    // Also send full quiz data as custom event for CRM enrichment
+    fbq('trackCustom','QuoteCompleted', leadData);
+  }
+
+  // 2. WEBHOOK — Send to your CRM/GoHighLevel/Zapier
+  // Replace the URL below with your webhook endpoint
+  const WEBHOOK_URL = 'https://YOUR-WEBHOOK-URL-HERE.com/lead';
+  // Uncomment when you have a real webhook:
+  /*
+  fetch(WEBHOOK_URL, {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(leadData)
+  }).catch(err => console.warn('Webhook error:', err));
+  */
+
+  // 3. Store in sessionStorage so thank-you page can access it
+  sessionStorage.setItem('vl_lead', JSON.stringify(leadData));
+
+  // Log to console in dev mode so you can verify all fields
+  console.log('=== VETERANS LIFE LEAD DATA ===');
+  console.table(leadData);
+  console.log('Full JSON:', JSON.stringify(leadData, null, 2));
+
+  // Show loading then results
+  document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('loading').classList.add('on');
+  document.getElementById('progFill').style.width='100%';
+  document.getElementById('progCount').textContent='Preparing your quote…';
+  scrollTop();
+  setTimeout(showResults, 2600);
+}
+
+// ════════════════════════════════════════════════════════
+//  RESULTS
+// ════════════════════════════════════════════════════════
+const PLANS=[
+  {n:'Transamerica Trendsetter LB',   d:'Simplified issue whole life. Level premium for life, builds cash value. No medical exam.',     f:['Guaranteed Level Premium','Builds Cash Value','No Medical Exam','Accidental Death Rider']},
+  {n:'Transamerica Final Expense Plus',d:'Designed for final expense coverage. Immediate full-benefit payout — no waiting period.',    f:['Immediate Full Benefit','No Waiting Period','Simplified Approval','Up to $50K Coverage']},
+  {n:'Transamerica Living Benefits WL',d:'Whole life with living benefits — access funds early with a qualifying diagnosis.',           f:['Living Benefit Rider','Cash Value Growth','Terminal Illness Benefit','Guaranteed Renewable']}
+];
+
+function showResults(){
+  document.getElementById('loading').classList.remove('on');
+  const age=A.age||65,g=A.gender||'Male';
+  const tobacco=A.tobacco||'No',health=A.health||[];
+  const hasIssues=health.length>0&&!health.includes('none');
+  const budgetMax={under30:30,'30to50':50,'50to75':75,'75to100':100,'100to150':150,'150plus':999}[A.budget]||999;
+  const selTier=A.coverageTier||25000;
+  const fname=A.fname||'Veteran';
+
+  s('resName',fname+"'s Personalized Transamerica Quotes");
+  s('resSummary','Age '+age+' · '+g+' · '+(tobacco==='Yes'?'Tobacco user':'Non-tobacco')+' · '+(hasIssues?'Health history noted':'Standard health'));
+
+  document.getElementById('summaryStrip').innerHTML=[
+    `<div class="ss-item">🎯 Goal: <span>${A.goal||'—'}</span></div>`,
+    `<div class="ss-item">🎖️ Status: <span>${A.status||'—'}</span></div>`,
+    `<div class="ss-item">🛡️ Coverage: <span>${A.coverageLabel||'—'}</span></div>`,
+    A.budgetLabel?`<div class="ss-item">💰 Budget: <span>${A.budgetLabel}</span></div>`:'',
+    `<div class="ss-item">❤️ Beneficiary: <span>${A.bene||'—'}</span></div>`,
+    `<div class="ss-item">⏱️ Timeline: <span>${A.timeline||'—'}</span></div>`
+  ].join('');
+
+  const idx=TIERS.findIndex(t=>t.v===selTier);
+  const si=Math.max(0,Math.min(idx,TIERS.length-1));
+  const idxs=[...new Set([si-1,si,si+1].map(i=>Math.max(0,Math.min(i,TIERS.length-1))))];
+  const picked=idxs.map(i=>TIERS[i]);
+
+  let html='';
+  picked.forEach((tier,i)=>{
+    const plan=PLANS[i%PLANS.length];
+    const mo=monthly(tier.v,age,g,tobacco,health);
+    const yr=mo*12*0.95;
+    const isRec=tier.v===selTier;
+    const fitsBudget=mo<=budgetMax;
+    const bNote=fitsBudget?`<div class="bmatch ok">✓ Fits within your budget</div>`:`<div class="bmatch warn">💬 Slightly over stated budget — agent can help</div>`;
+    html+=`<div class="qcard${isRec?' rec':''}">
+      <div class="qcard-hd"><span class="carrier">Transamerica — ${plan.n}</span>${isRec?'<span class="rec-pill">★ Your Selection</span>':''}</div>
+      <div class="qcard-body">
+        <div class="qd"><div class="pname">${plan.n}</div><div class="pdesc">${plan.d}</div></div>
+        <div class="qcov"><div class="camount">${tier.lb}</div><div class="clabel">Coverage</div></div>
+        <div class="qprice"><div class="mo">$${mo.toFixed(2)}</div><div class="per">per month</div><div class="yr">~$${yr.toFixed(0)}/yr annual pay</div>${bNote}</div>
+      </div>
+      <div class="qfeats">${plan.f.map(f=>`<span class="feat"><span class="fd">●</span>${f}</span>`).join('')}</div>
+    </div>`;
+  });
+
+  document.getElementById('quoteCards').innerHTML=html;
+  document.getElementById('results').classList.add('on');
+
+  // Fire Meta Pixel purchase-intent event on results view
+  if(typeof fbq!=='undefined'){
+    fbq('track','ViewContent',{
+      content_name: A.coverageLabel+' Life Insurance Quote',
+      content_category: 'Insurance Quote',
+      value: monthly(selTier,age,g,tobacco,health).toFixed(2),
+      currency: 'USD'
+    });
+  }
+  scrollTop();
+}
+</script>
+</body>
+</html>
