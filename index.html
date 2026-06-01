@@ -738,13 +738,12 @@ function submitForm(){
   // Replace the URL below with your webhook endpoint
   const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/G5oT89LsK4lOypep4pQg/webhook-trigger/6462e0a2-c78a-4111-a9db-5a4f6eef0503';
   // Uncomment when you have a real webhook:
-  /*
+  
   fetch(WEBHOOK_URL, {
     method: 'POST',
     headers: {'Content-Type':'application/json'},
     body: JSON.stringify(leadData)
   }).catch(err => console.warn('Webhook error:', err));
-  */
 
   // 3. Store in sessionStorage so thank-you page can access it
   sessionStorage.setItem('vl_lead', JSON.stringify(leadData));
