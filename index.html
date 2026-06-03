@@ -339,8 +339,8 @@ footer a:hover{color:var(--gold2);}
       <div class="frow">
         <div class="fg">
           <label>Date of Birth</label>
-          <input type="date" id="dob" max="2008-01-01" min="1924-01-01" onchange="A.dob=this.value;calcAge();clearFieldErr('dob');">
-          <div class="field-err" id="dob-err">Please enter your date of birth.</div>
+          <input type="text" id="dob" placeholder="MM/DD/YYYY" maxlength="10" inputmode="numeric" autocomplete="bday" oninput="handleDobInput(this);clearFieldErr('dob');">
+          <div class="field-err" id="dob-err">Please enter a valid date of birth (MM/DD/YYYY).</div>
         </div>
         <div class="fg">
           <label>Gender</label>
@@ -619,14 +619,14 @@ const VL_TIERS=[
 //  RATE TABLE (base per $1,000)
 // ════════════════════════════════════════════════════════
 const RATES={
-  male:  {'45-49':2.85,'50-54':3.50,'55-59':4.40,'60-64':5.60,'65-69':7.20,'70-74':9.80,'75-79':13.50,'80-84':18.90,'85-89':26.00,'90+':36.00},
-  female:{'45-49':2.20,'50-54':2.70,'55-59':3.30,'60-64':4.20,'65-69':5.40,'70-74':7.20,'75-79':10.20,'80-84':14.50,'85-89':20.00,'90+':28.00}
+  male:  {'40-44':2.20,'45-49':2.85,'50-54':3.50,'55-59':4.40,'60-64':5.60,'65-69':7.20,'70-74':9.80,'75-79':13.50,'80-84':18.90,'85':26.00},
+  female:{'40-44':1.70,'45-49':2.20,'50-54':2.70,'55-59':3.30,'60-64':4.20,'65-69':5.40,'70-74':7.20,'75-79':10.20,'80-84':14.50,'85':20.00}
 };
 function band(age){
-  if(age<50)return'45-49';if(age<55)return'50-54';if(age<60)return'55-59';
-  if(age<65)return'60-64';if(age<70)return'65-69';if(age<75)return'70-74';
-  if(age<80)return'75-79';if(age<85)return'80-84';if(age<90)return'85-89';
-  return'90+';
+  if(age<45)return'40-44';if(age<50)return'45-49';if(age<55)return'50-54';
+  if(age<60)return'55-59';if(age<65)return'60-64';if(age<70)return'65-69';
+  if(age<75)return'70-74';if(age<80)return'75-79';if(age<85)return'80-84';
+  return'85';
 }
 function baseRate(cov,age,gender,tobacco,health){
   const g=(gender==='Female')?'female':'male';
@@ -711,6 +711,38 @@ const CTX={
 };
 function ctx(){return CTX[A.goal]||CTX['Just Exploring'];}
 
+// Auto-format DOB as MM/DD/YYYY while typing
+function handleDobInput(input){
+  // Strip all non-digits
+  let raw=input.value.replace(/\D/g,'').slice(0,8);
+  let fmt='';
+  if(raw.length>4)      fmt=raw.slice(0,2)+'/'+raw.slice(2,4)+'/'+raw.slice(4);
+  else if(raw.length>2) fmt=raw.slice(0,2)+'/'+raw.slice(2);
+  else                  fmt=raw;
+  input.value=fmt;
+
+  // Only parse when we have a full 8-digit date
+  if(raw.length===8){
+    const mm=parseInt(raw.slice(0,2),10);
+    const dd=parseInt(raw.slice(2,4),10);
+    const yyyy=parseInt(raw.slice(4,8),10);
+    const d=new Date(yyyy,mm-1,dd);
+    // Validate the date itself is real
+    if(d.getFullYear()!==yyyy||d.getMonth()!==mm-1||d.getDate()!==dd){
+      document.getElementById('ageMsg').textContent='That date doesn\'t look valid — please check.';
+      document.getElementById('ageMsg').style.color='var(--red)';
+      A.dob=null;A.age=null;
+      return;
+    }
+    // Store ISO format for the lead payload
+    A.dob=yyyy+'-'+(mm<10?'0'+mm:mm)+'-'+(dd<10?'0'+dd:dd);
+    calcAge();
+  } else {
+    A.dob=null;A.age=null;
+    document.getElementById('ageMsg').textContent='';
+  }
+}
+
 function calcAge(){
   if(!A.dob)return;
   const d=new Date(A.dob),t=new Date();
@@ -719,10 +751,17 @@ function calcAge(){
   if(m<0||(m===0&&t.getDate()<d.getDate()))age--;
   A.age=age;
   const el=document.getElementById('ageMsg');
-  if(age>=45&&age<=90){el.textContent='Age '+age+' — eligible for coverage';el.style.color='#1e6b1e';}
-  else if(age<45){el.textContent='Age '+age+' — plans start at age 45';el.style.color='var(--muted)';}
-  else{el.textContent='Age '+age+' — please contact us directly';el.style.color='var(--red)';}
-  if(typeof fbq!=='undefined') fbq('trackCustom','AgeEntered',{age:age});
+  if(age>=40&&age<=85){
+    el.textContent='Age '+age+' — eligible for coverage ✓';
+    el.style.color='#1e6b1e';
+  } else if(age<40){
+    el.textContent='Age '+age+' — coverage starts at age 40.';
+    el.style.color='var(--muted)';
+  } else {
+    el.textContent='Age '+age+' — please contact us directly for ages over 85.';
+    el.style.color='var(--red)';
+  }
+  try{if(typeof fbq!=='undefined') fbq('trackCustom','AgeEntered',{age:age});}catch(e){}
 }
 
 function buildCoverage(){
@@ -908,9 +947,9 @@ function validateStep(n){
     let ok=true;
     if(!A.dob){showFieldErr('dob');ok=false;}else clearFieldErr('dob');
     if(!A.gender){showFieldErr('gender');ok=false;}else clearFieldErr('gender');
-    if(!A.age||A.age<45||A.age>90){
+    if(!A.age||A.age<40||A.age>85){
       showFieldErr('dob');
-      const m=A.age&&A.age<45?'Age must be 45 or older to qualify.':A.age&&A.age>90?'Please contact us directly for ages over 90.':'Please enter your date of birth.';
+      const m=A.age&&A.age<40?'Age must be 40 or older to qualify.':A.age&&A.age>85?'Please contact us directly for ages over 85.':'Please enter a valid date of birth (MM/DD/YYYY).';
       showErr('err4',m);ok=false;
     }
     if(!ok)return false;
@@ -1001,6 +1040,12 @@ function submitForm(){
 
   const WEBHOOK_URL='https://services.leadconnectorhq.com/hooks/G5oT89LsK4lOypep4pQg/webhook-trigger/eb1378aa-0bd7-4543-a97f-8926d864332c';
   try{fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(leadData)}).catch(function(){});}catch(e){}
+
+  // ── Google Sheets Web App — paste your deployed script URL below ──
+  const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+  if(SHEET_URL.indexOf('YOUR_') === -1){
+    try{fetch(SHEET_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(leadData)}).catch(function(){});}catch(e){}
+  }
   try{sessionStorage.setItem('vl_lead',JSON.stringify(leadData));}catch(e){}
   try{console.log('=== VETERANS LIFE LEAD DATA ===\n'+JSON.stringify(leadData,null,2));}catch(e){}
 
