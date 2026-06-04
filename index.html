@@ -1042,7 +1042,7 @@ function submitForm(){
   try{fetch(WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(leadData)}).catch(function(){});}catch(e){}
 
   // ── Google Sheets Web App — paste your deployed script URL below ──
-  const SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+  const SHEET_URL = 'https://script.google.com/macros/s/AKfycbwUQ1xkpE0XJajDrRX4eoXvJesQkMDJTR1oadORSAJi_C0c1Up5HfPX71Nu29I4WWDq0Q/exec';
   if(SHEET_URL.indexOf('YOUR_') === -1){
     try{
       fetch(SHEET_URL, {
