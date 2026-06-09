@@ -1034,7 +1034,14 @@ function submitForm(){
     utm_medium:new URLSearchParams(window.location.search).get('utm_medium')||'',
     utm_campaign:new URLSearchParams(window.location.search).get('utm_campaign')||'',
   };
-
+ // Google Ads Conversion — fires on full form submission
+  try{
+    gtag('event','conversion',{
+      'send_to':'AW-18210462760/QfnfCMGh-LscEKi4tutD',
+      'value':parseFloat(leadData.est_whole_monthly)*12,
+      'currency':'USD'
+    });
+  }catch(e){}
   try{
     if(typeof fbq!=='undefined'){
       fbq('track','Lead',{
